@@ -1,24 +1,9 @@
 #include <iostream>
 using namespace std;
-void Linear_Search(int p[],int n);
+void Array();
 int main()
 {
-    cout<<"Enter number of elements"<<endl;
-    int n;
-    cin>>n;
-    int *p=new int [n];
-    if(n==0)
-    {
-        cout<<"Number of elements can't be 0!"<<endl<<"Try Again!!"<<endl;
-    }
-    else{
-        cout<<"enter "<<n<<" numbers"<<endl;
-    for (int i=0;i<n;i++)
-    {
-        cin>>p[i];
-    }}
-    Linear_Search(p,n);
-    delete []p;
+    Array();
     return 0;
 }
 
@@ -61,4 +46,28 @@ void Linear_Search(int p[],int n)
         }
         else{cout<<"not Present"<<endl;}
     }
+}
+void Array(){
+ cout<<"Enter number of elements"<<endl;
+    int n;
+    cin>>n;
+    int *p=new int [n];
+    if(n==0)
+    {
+        cout<<"Number of elements can't be 0!"<<endl<<"Try Again!!"<<endl;
+    }
+    else{
+        cout<<"enter "<<n<<" numbers"<<endl;
+    for (int i=0;i<n;i++)
+    {
+        cin>>p[i];
+    }}
+    char z;
+    cout<<"If you wish to search an element press 'y' else press'n' "<<endl;
+    cin>>z;
+    if(z=='y')
+    {Linear_Search(p,n);}
+    else{cout<<"GoodBye! "<<endl;}
+    delete []p;
+
 }
